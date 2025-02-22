@@ -1,6 +1,8 @@
+# syntax=docker/dockerfile:1
+
 FROM node:lts-alpine
-WORKDR /app
+WORKDIR /app
 COPY . .
-RUN yarn and install --production
-CMD ["node" "src/index.js"]
+RUN yarn install --production
+CMD ["node", "src/index.js"]
 EXPOSE 3000
